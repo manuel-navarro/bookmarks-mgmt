@@ -1,0 +1,21 @@
+<div class="expandable-action-buttons">
+  <button mat-raised-button color="primary" (click)="onAdd()" matTooltip="Add User" matTooltipPosition="right">
+    <mat-icon aria-label="Example icon-button with a heart icon">add_circle</mat-icon> ADD
+  </button>
+  <button mat-button color="primary" (click)="accordion.openAll()">Expand All</button>
+  <button mat-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<mat-accordion class="expandable-headers-align" multi>
+  <mat-expansion-panel *ngFor="let group of groups;">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ group.viewValue }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ this.filterBookmarksByGroup(group.value).length }} bookmark(s)
+        <mat-icon>{{ group.icon }}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-bookmarks-list [dataSource]="this.filterBookmarksByGroup(group.value)"></app-bookmarks-list>
+  </mat-expansion-panel>
+</mat-accordion>
