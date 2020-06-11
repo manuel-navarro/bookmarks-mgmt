@@ -12,6 +12,44 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Structure
+
+```bash
+.
+├── app
+│   ├── +state
+│   ├── bookmarks-detail
+│   ├── bookmarks-list
+│   ├── card
+│   ├── expandable-table
+│   ├── layout
+│   └── shared
+│       ├── interfaces
+│       └── modules
+└── assets
+```
+#### `+state`
+Directory containing the NgRx store to manage the bookmarks
+
+#### `bookmarks-detail`
+Component to show the form to add/edit a bookmark
+
+#### `bookmarks-list`
+Component to list a bookmark group
+
+#### `card`
+Component to show content as a card. It is used, for example, by bookmarks-detail component.
+
+#### `expandable-table`
+Component in charge of showing an accordion with a table for each available group of bookmarks.
+
+#### `layout`
+Component representing the main layout used by the app.
+
+#### `shared`
+Directory containing common interfaces and modules used across the application.
+
+
 ## Screenshots
 
 1. The content is grouped in three categories: Personal, Work and Leisure. This content is initially collapsed but a count for each group is shown.
