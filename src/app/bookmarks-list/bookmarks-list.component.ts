@@ -11,7 +11,7 @@ import { Group } from '../shared/interfaces/group.interface';
   styleUrls: ['./bookmarks-list.component.scss']
 })
 export class BookmarksListComponent implements OnInit {
-  @Input() group: Group;
+  @Input() group: string;
   @Input() dataSource: Bookmark[];
 
   public displayedColumns: string[] = ['name', 'url', 'group', 'actions'];
