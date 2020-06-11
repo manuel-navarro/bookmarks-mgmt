@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bookmarks-mgmt",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
