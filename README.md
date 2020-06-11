@@ -36,7 +36,7 @@ For a live version of the project, navigate to [https://bookmarks-mgmt.web.app/]
 Directory containing the NgRx store to manage the bookmarks
 
 #### `bookmarks-detail`
-Component to show the form to add/edit a bookmark
+Component to show the form to add a bookmark
 
 #### `bookmarks-list`
 Component to list a bookmark group
