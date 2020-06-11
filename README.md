@@ -14,7 +14,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Live version
 
-For a live version of the project, navigate to `https://manuel-navarro.github.io/bookmarks-mgmt/`.
+For a live version of the project, navigate to [https://bookmarks-mgmt.web.app/](https://bookmarks-mgmt.web.app/).
 
 ## Structure
 
