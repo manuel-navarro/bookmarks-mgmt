@@ -19,7 +19,7 @@
 
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef>
-      <button mat-icon-button color="primary" (click)="onAdd(this.group)" matTooltip="Add User"
+      <button mat-icon-button color="primary" (click)="onAdd(this.group.value)" matTooltip="Add User"
         matTooltipPosition="right">
         <mat-icon aria-label="Add bookmark">add</mat-icon>
       </button>

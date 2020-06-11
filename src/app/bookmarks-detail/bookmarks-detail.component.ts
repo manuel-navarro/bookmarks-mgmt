@@ -34,7 +34,7 @@ export class BookmarksDetailComponent {
     this.store.dispatch(BookmarksActions.AddBookmark(formValue));
   }
 
-  onCancelItem(index: number) {
+  onCancelItem() {
     this.store.dispatch(BookmarksActions.ToggleFormBookmarks());
   }
 

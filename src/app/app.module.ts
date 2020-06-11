@@ -15,7 +15,7 @@ import { BookmarksEffects } from './+state/bookmarks.effects';
 import { ExpandableTableComponent } from './expandable-table/expandable-table.component';
 import { MaterialModule } from './shared/modules/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { bookmarkReducer } from './+state/bookmarks.reducer';
+import { reducer } from './+state/bookmarks.reducer';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { bookmarkReducer } from './+state/bookmarks.reducer';
     FlexLayoutModule,
     ReactiveFormsModule,
     MaterialModule,
-    StoreModule.forRoot({ app: bookmarkReducer }),
+    StoreModule.forRoot({ app: reducer }),
     EffectsModule.forRoot([BookmarksEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states

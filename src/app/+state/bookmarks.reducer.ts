@@ -1,6 +1,6 @@
 import * as BookmarksActions from './bookmarks.actions';
 import { BookmarksState } from './bookmarks.state';
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on, Action } from '@ngrx/store';
 
 const initialState: BookmarksState = {
     showForm: false,
@@ -23,7 +23,7 @@ const initialState: BookmarksState = {
     editedBookmark: null
 };
 
-export const bookmarkReducer = createReducer(
+const bookmarkReducer = createReducer(
     initialState,
     on(BookmarksActions.ToggleFormBookmarks, state => ({
         ...state,
@@ -56,3 +56,7 @@ export const bookmarkReducer = createReducer(
         })
     }))
 );
+
+export function reducer(state: BookmarksState | undefined, action: Action) {
+    return bookmarkReducer(state, action);
+}
