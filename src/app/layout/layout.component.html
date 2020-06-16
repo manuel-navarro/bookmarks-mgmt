@@ -1,8 +1,10 @@
-<div fxLayout="row wrap" fxLayoutAlign="center center" class="layout-wrapper">
-  <div fxFlex="100%">
-    <h1 class="layout-title">Bookmarks Management</h1>
-  </div>
-  <div fxFlex="100%" class="flex-wrapper">
+<div class="layout-wrapper" fxLayout="column">
+  <mat-toolbar class="mat-elevation-z2">
+    <h1 class="layout-title" fxLayout="row" fxLayoutAlign="center center">
+      <mat-icon>bookmarks</mat-icon> Bookmarks Management
+    </h1>
+  </mat-toolbar>
+  <div fxFlex="100" class="flex-wrapper">
     <ng-content></ng-content>
   </div>
 </div>

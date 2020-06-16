@@ -1,4 +1,6 @@
 <app-layout>
-  <app-expandable-table fxFlex="50%" fxFlex.lt-md="100%" [groups]="groups"></app-expandable-table>
-  <app-bookmarks-detail fxFlex="50%" fxFlex.lt-md="100%" *ngIf="showForm"></app-bookmarks-detail>
+  <app-expandable-table fxFlex="50" fxFlex.lt-sm="100" [groups]="groups" [fxHide.lt-sm]="showForm">
+  </app-expandable-table>
+  <app-bookmarks-detail fxFlex="50" fxFlex.lt-sm="100" *ngIf="showForm" ngClass.gt-xs="adjustTop">
+  </app-bookmarks-detail>
 </app-layout>

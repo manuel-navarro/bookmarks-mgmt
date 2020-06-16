@@ -5,6 +5,7 @@ import { Store, select } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { selectShowForm } from './+state/bookmarks.selectors';
 import { Group } from './shared/interfaces/group.interface';
+import * as BookmarksActions from './+state/bookmarks.actions';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,8 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe((showForm: boolean) => {
         this.showForm = showForm;
       });
+
+    this.store.dispatch(BookmarksActions.FetchBookmarks());
   }
 
   ngOnDestroy() {

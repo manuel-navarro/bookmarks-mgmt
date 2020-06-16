@@ -4,21 +4,7 @@ import { createReducer, on, Action } from '@ngrx/store';
 
 const initialState: BookmarksState = {
     showForm: false,
-    bookmarks: [{
-        name: "Google",
-        url: "http://google.com",
-        group: {
-            value: "work",
-            viewValue: "Work"
-        }
-    }, {
-        name: "Wired",
-        url: "http://wired.com",
-        group: {
-            value: "leisure",
-            viewValue: "Leisure"
-        }
-    }],
+    bookmarks: [],
     editedBookmarkIndex: -1,
     editedBookmark: null
 };

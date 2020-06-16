@@ -35,6 +35,7 @@ import { reducer } from './+state/bookmarks.reducer';
     StoreModule.forRoot({ app: reducer }),
     EffectsModule.forRoot([BookmarksEffects]),
     StoreDevtoolsModule.instrument({
+      name: 'Bookmarks Management',
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),

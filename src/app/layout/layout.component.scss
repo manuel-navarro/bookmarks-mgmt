@@ -1,14 +1,24 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-pink, A700);
+$accent: mat-palette($mat-pink, A400);
+
 .layout-wrapper {
+  background-image: radial-gradient(circle at 43.84% 120.44%, #ff842c 0, #ff753a 8.33%, #ff6545 16.67%, #ff534d 25%, #f44152 33.33%, #dd2d54 41.67%, #c21852 50%, #a6004e 58.33%, #8d004b 65.67%, #770048 70%, #640045 83.33%, #540044 91.67%, #450044 100%);
   height: 100%;
-  background: #303030;
-  padding: 24px;
 }
 
 .layout-title {
-  color: white;
-  margin-top: 60px;
+  color: mat-color($accent);
+  padding: 0 8px;
 }
 
 .flex-wrapper {
   height: 100%;
+  padding: 24px;
+}
+
+mat-icon {
+  margin-right: 8px;
 }

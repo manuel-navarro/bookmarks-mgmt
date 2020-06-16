@@ -1,8 +1,9 @@
 import { createAction } from '@ngrx/store';
 import { Bookmark } from '../shared/interfaces/bookmark.interface';
 
-export const TOGGLE_FORM_BOOKMARKS = '[Bookmarks] Toggle Form Bookmarks';
+export const FETCH_BOOKMARKS = '[Bookmark] Fetch Bookmarks';
 export const SET_BOOKMARKS = '[Bookmark] Set Bookmarks';
+export const TOGGLE_FORM_BOOKMARKS = '[Bookmarks] Toggle Form Bookmarks';
 export const ADD_BOOKMARK = '[Bookmark] Add Bookmark';
 export const ADD_BOOKMARK_SUCCESS = '[Bookmark] Add Bookmark Success';
 export const ADD_BOOKMARK_FAIL = '[Bookmark] Add Bookmark Fail';
@@ -10,6 +11,9 @@ export const START_EDIT_BOOKMARK = '[Bookmark] Start Edit Bookmark';
 export const STOP_EDIT_BOOKMARK = '[Bookmark] Stop Edit Bookmark';
 export const DELETE_BOOKMARK = '[Bookmark] Delete Bookmark';
 
+export const FetchBookmarks = createAction(
+    FETCH_BOOKMARKS
+);
 export const SetBookmarks = createAction(
     SET_BOOKMARKS,
     (payload: Bookmark[]) => ({ payload })
